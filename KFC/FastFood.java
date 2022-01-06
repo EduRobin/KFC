@@ -2,7 +2,7 @@ package KFC;
 
 public class FastFood {
 
-    String nazev;
+    final String nazev;
     int countOfChicken;
 
     public FastFood(String nazev) {
@@ -14,10 +14,10 @@ public class FastFood {
         int storage = countOfChicken - amount;
         if(storage <= 0) {
             countOfChicken += amount * 2;
-            System.out.println("Incrasing to: " + countOfChicken);
+            System.out.println(nazev +" storage increasing to: "+ countOfChicken);
         }
         countOfChicken -= amount;
-        System.out.println("Decreasing to: " + countOfChicken);
+        System.out.println(nazev + " storage decreasing to: " + countOfChicken);
     }
 
     public void sellChicken(int amount) {
